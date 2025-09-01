@@ -23,4 +23,4 @@ const nextConfig = {
   reactStrictMode: true, // good for catching bugs in dev
 };
 
-module.exports = nextConfig;
+export default nextConfig;
