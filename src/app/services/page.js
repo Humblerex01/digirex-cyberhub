@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import AnimatedBackground from "../../../components/AnimatedBackground"; // adjust if your path differs
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"; // ⬅️ Put this at the top of your file
+import Link from "next/link";
 export default function ServicesPage() {
 const services = [
   {
@@ -106,84 +107,84 @@ const services = [
       </div>
       </section>
 
-          {/* Footer */}
-    <footer className="relative z-10 backdrop-blur-md text-white py-10 border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-6 space-y-10 md:space-y-0">
-        
-        {/* About / Brand */}
-        <div className="text-left mb-8 md:mb-0">
-          <h3 className="text-2xl font-bold" style={{ color: "#09F289" }}>
-            DigiRex Cyber Hub
-          </h3>
-          <p className="mt-3 text-sm justify opacity-80">
-            Empowering individuals and businesses with cutting-edge technology solutions, robust cybersecurity strategies, innovative web development, creative digital content, and forward-looking crypto innovations that drive growth, security, and digital transformation.
-          </p>
+{/* Footer */}
+<footer className="relative z-10 backdrop-blur-md text-white py-10 border-t border-white/10">
+  <div className="max-w-6xl mx-auto px-6 space-y-10 md:space-y-0">
+    
+    {/* About / Brand */}
+    <div className="text-left mb-8 md:mb-0">
+      <h3 className="text-2xl font-bold" style={{ color: "#09F289" }}>
+        DigiRex Cyber Hub
+      </h3>
+      <p className="mt-3 text-sm justify opacity-80">
+        Empowering individuals and businesses with cutting-edge technology solutions, robust cybersecurity strategies, innovative web development, creative digital content, and forward-looking crypto innovations that drive growth, security, and digital transformation.
+      </p>
+    </div>
+    <br></br>
+
+    {/* Row for Quick Links + Follow Us on mobile */}
+    <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-8">
+      
+      {/* Quick Links */}
+      <div className="text-left">
+        <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
+          Quick Links
+        </h4>
+        <ul className="space-y-2 text-sm opacity-90">
+          <li><Link href="/" className="hover:text-[#09F289] hover:underline">Home</Link></li>
+          <li><Link href="/services" className="hover:text-[#09F289] hover:underline">Services</Link></li>
+          <li><Link href="/about" className="hover:text-[#09F289] hover:underline">About</Link></li>
+          <li><Link href="/contact" className="hover:text-[#09F289] hover:underline">Contact</Link></li>
+        </ul>
+      </div>
+
+      {/* Follow Us */}
+      <div className="text-left">
+        <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
+          Follow Us
+        </h4>
+        <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
+          <FaFacebook className="text-[#09F289]" />
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Facebook</Link>
         </div>
-        <br></br>
-    
-        {/* Row for Quick Links + Follow Us on mobile */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-8">
-          
-          {/* Quick Links */}
-          <div className="text-left">
-            <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
-              Quick Links
-            </h4>
-            <ul className="space-y-2 text-sm opacity-90">
-              <li><a href="/" className="hover:text-[#09F289] hover:underline">Home</a></li>
-              <li><a href="/services" className="hover:text-[#09F289] hover:underline">Services</a></li>
-              <li><a href="/about" className="hover:text-[#09F289] hover:underline">About</a></li>
-              <li><a href="/contact" className="hover:text-[#09F289] hover:underline">Contact</a></li>
-            </ul>
-          </div>
-    
-          {/* Follow Us */}
-          <div className="text-left">
-            <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
-              Follow Us
-            </h4>
-            <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
-              <FaFacebook className="text-[#09F289]" />
-              <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Facebook</a>
-            </div>
-            <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
-              <FaTwitter className="text-[#09F289]" />
-              <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Twitter</a>
-            </div>
-            <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
-              <FaInstagram className="text-[#09F289]" />
-              <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Instagram</a>
-            </div>
-            <div className="flex items-center gap-2 text-sm opacity-90">
-              <FaLinkedin className="text-[#09F289]" />
-              <a href="#" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</a>
-            </div>
-          </div>
-    
-          {/* Get in Touch */}
-          <div className="col-span-2 md:col-span-1 text-left mt-8 md:mt-0">
-            <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
-              Get in Touch
-            </h4>
-            <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
-              <FaMapMarkerAlt className="text-[#09F289]" />
-              <span>Owerri, Imo State, Nigeria</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
-              <FaEnvelope className="text-[#09F289]" />
-              <a href="mailto:digirexcyberhub@gmail.com" className="text-white hover:underline hover:text-[#09F289]">
-                digirexcyberhub@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-2 text-sm opacity-90">
-              <FaPhoneAlt className="text-[#09F289]" />
-              <a href="tel:08143691920" className="text-white hover:underline hover:text-[#09F289]">
-                +234 814 369 1920
-              </a>
-            </div>
-          </div>
+        <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
+          <FaTwitter className="text-[#09F289]" />
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Twitter</Link>
+        </div>
+        <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
+          <FaInstagram className="text-[#09F289]" />
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Instagram</Link>
+        </div>
+        <div className="flex items-center gap-2 text-sm opacity-90">
+          <FaLinkedin className="text-[#09F289]" />
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
         </div>
       </div>
+
+      {/* Get in Touch */}
+      <div className="col-span-2 md:col-span-1 text-left mt-8 md:mt-0">
+        <h4 className="text-lg font-semibold mb-3" style={{ color: "#09F289" }}>
+          Get in Touch
+        </h4>
+        <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
+          <FaMapMarkerAlt className="text-[#09F289]" />
+          <span>Owerri, Imo State, Nigeria</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
+          <FaEnvelope className="text-[#09F289]" />
+          <Link href="mailto:digirexcyberhub@gmail.com" className="text-white hover:underline hover:text-[#09F289]">
+            digirexcyberhub@gmail.com
+          </Link>
+        </div>
+        <div className="flex items-center gap-2 text-sm opacity-90">
+          <FaPhoneAlt className="text-[#09F289]" />
+          <Link href="tel:08143691920" className="text-white hover:underline hover:text-[#09F289]">
+            +234 814 369 1920
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
     
       {/* Copyright */}
       <div className="mt-8 border-t border-white/10 pt-4 text-center text-[#09F289] text-sm opacity-70">

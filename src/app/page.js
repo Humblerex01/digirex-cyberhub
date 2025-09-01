@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import AnimatedBackground from "../../components/AnimatedBackground"; // adjust if your path differs
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"; // ⬅️ Put this at the top of your file
+import Link from "next/link";
 
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
           whileHover={{ scale: 1.06 }}
           className="bg-[#09F289] text-[#090055] font-semibold px-6 py-3 rounded-xl shadow-lg"
         >
-          <a href="/contact">Get Started</a>
+          <Link href="/contact">Get Started</Link>
         </motion.button>
       </section>
 
@@ -65,7 +66,7 @@ export default function Home() {
           whileHover={{ scale: 1.06 }}
           className="bg-[#09F289] text-[#090055] font-semibold px-8 py-3 rounded-xl shadow-lg border-t border-[090055]"
         >
-          <a href="/contact">Contact Us</a>
+          <Link href="/contact">Contact Us</Link>
         </motion.button>
       </section>
 
@@ -93,10 +94,10 @@ export default function Home() {
           Quick Links
         </h4>
         <ul className="space-y-2 text-sm opacity-90">
-          <li><a href="/" className="hover:text-[#09F289] hover:underline">Home</a></li>
-          <li><a href="/services" className="hover:text-[#09F289] hover:underline">Services</a></li>
-          <li><a href="/about" className="hover:text-[#09F289] hover:underline">About</a></li>
-          <li><a href="/contact" className="hover:text-[#09F289] hover:underline">Contact</a></li>
+          <li><Link href="/" className="hover:text-[#09F289] hover:underline">Home</Link></li>
+          <li><Link href="/services" className="hover:text-[#09F289] hover:underline">Services</Link></li>
+          <li><Link href="/about" className="hover:text-[#09F289] hover:underline">About</Link></li>
+          <li><Link href="/contact" className="hover:text-[#09F289] hover:underline">Contact</Link></li>
         </ul>
       </div>
 
@@ -107,19 +108,19 @@ export default function Home() {
         </h4>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaFacebook className="text-[#09F289]" />
-          <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Facebook</a>
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Facebook</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaTwitter className="text-[#09F289]" />
-          <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Twitter</a>
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Twitter</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaInstagram className="text-[#09F289]" />
-          <a href="#" className="text-white hover:underline hover:text-[#09F289]">@Instagram</a>
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Instagram</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90">
           <FaLinkedin className="text-[#09F289]" />
-          <a href="#" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</a>
+          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
         </div>
       </div>
 
@@ -134,15 +135,15 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaEnvelope className="text-[#09F289]" />
-          <a href="mailto:digirexcyberhub@gmail.com" className="text-white hover:underline hover:text-[#09F289]">
+          <Link href="mailto:digirexcyberhub@gmail.com" className="text-white hover:underline hover:text-[#09F289]">
             digirexcyberhub@gmail.com
-          </a>
+          </Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90">
           <FaPhoneAlt className="text-[#09F289]" />
-          <a href="tel:08143691920" className="text-white hover:underline hover:text-[#09F289]">
+          <Link href="tel:08143691920" className="text-white hover:underline hover:text-[#09F289]">
             +234 814 369 1920
-          </a>
+          </Link>
         </div>
       </div>
     </div>

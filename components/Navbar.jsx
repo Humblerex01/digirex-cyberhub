@@ -2,6 +2,8 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,19 +15,20 @@ export default function Navbar() {
         <motion.a
           href="/"
           className="flex items-center space-x-2">
-          <img 
+          <Image 
             src="/logo.png" 
             alt="DigiRex Logo" 
-            className="h-18 w-auto"
+            height={60} 
+            width={80}
           />
         </motion.a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-[#090055] font-semibold">
-          <a href="/" className="hover:text-white transition hover:underline">Home</a>
-          <a href="/about" className="hover:text-white transition hover:underline">About</a>
-          <a href="/services" className="hover:text-white transition hover:underline">Services</a>
-          <a href="/contact" className="hover:text-white transition hover:underline">Contact</a>
+          <Link href="/" className="hover:text-white transition hover:underline">Home</Link>
+          <Link href="/about" className="hover:text-white transition hover:underline">About</Link>
+          <Link href="/services" className="hover:text-white transition hover:underline">Services</Link>
+          <Link href="/contact" className="hover:text-white transition hover:underline">Contact</Link>
         </div>
 
         {/* Hamburger Menu (Mobile) */}
@@ -44,10 +47,10 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-[#090055] text-[#FFFFFF] px-6 py-4 space-y-4"
         >
-          <a href="/" className="block hover:text-[#09F289]">Home</a>
-          <a href="/about" className="block hover:text-[#09F289]">About</a>
-          <a href="/services" className="block hover:text-[#09F289]">Services</a>
-          <a href="/contact" className="block hover:text-[#09F289]">Contact</a>
+          <Link href="/" className="block hover:text-[#09F289]">Home</Link>
+          <Link href="/about" className="block hover:text-[#09F289]">About</Link>
+          <Link href="/services" className="block hover:text-[#09F289]">Services</Link>
+          <Link href="/contact" className="block hover:text-[#09F289]">Contact</Link>
         </motion.div>
       )}
     </nav>
