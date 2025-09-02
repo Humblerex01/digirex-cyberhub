@@ -57,7 +57,7 @@ const projects = [
     description: "A Tech Hub delivering innovative digital solutions in web development, branding, IT consultancy, and cybersecurity awareness, helping businesses thrive in the modern tech space.",
     desktopImg: "/digirexdesktopview.png",
     mobileImg: "/digirexmobileview.png",
-    Link: "https://digirexcyberhub.vercel.app",
+    Link: "https://digirexcyberhub.netlify.app",
   },
     {
     title: "ASF FUTO Fellowship Website",
