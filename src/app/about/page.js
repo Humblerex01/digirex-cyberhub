@@ -66,6 +66,13 @@ const projects = [
     mobileImg: "/ASFmobileview.jpg",
     Link: "https://asffuto.netlify.app", // replace with the actual link
   },
+    {
+    title: "Student Departmental Info Board",
+    description: "A fullstack interactive website built for Cyber Security Department to manage events, announcements, and timetables for students with an Admin dashboard.",
+    desktopImg: "/StudentDesktop.png",
+    mobileImg: "/StudentMobile.jpg",
+    Link: "https://studentinfoboard.netlify.app", // replace with the actual link
+  },
   // add more projects here...
 ];
 
