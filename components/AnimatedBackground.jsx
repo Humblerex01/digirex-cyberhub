@@ -14,17 +14,16 @@ export default function AnimatedBackground() {
     { top: "88%", left: "75%", d: 7 },
   ];
 
-    const techGraphics = [
-    { src: "/laptop.png",       top: "10%", left: "10%", d: 18, w: 100, h: 100 },
-    { src: "/globe.png",        top: "28%", left: "75%", d: 22, w: 100, h: 100 },
-    { src: "/shield.png",       top: "40%", left: "12%", d: 26, w: 100, h: 100 },
-    { src: "/bitcoin.png",      top: "65%", left: "75%", d: 24, w: 100, h: 100 },
-    { src: "/braincircuit.png", top: "75%", left: "25%", d: 20, w: 100, h: 100 },
-    ];
-
+  const techGraphics = [
+    { src: "/laptop.png", alt: "Laptop", top: "10%", left: "10%", d: 18, w: 100, h: 100 },
+    { src: "/globe.png", alt: "Globe", top: "28%", left: "75%", d: 22, w: 100, h: 100 },
+    { src: "/shield.png", alt: "Shield", top: "40%", left: "12%", d: 26, w: 100, h: 100 },
+    { src: "/bitcoin.png", alt: "Bitcoin", top: "65%", left: "75%", d: 24, w: 100, h: 100 },
+    { src: "/braincircuit.png", alt: "AI Brain Circuit", top: "75%", left: "25%", d: 20, w: 100, h: 100 },
+  ];
 
   return (
-    <div className="absolute inset-0 -z-0 overflow-hidden">
+    <div className="absolute inset-0 -z-10 overflow-hidden">
       {/* Tech Background Image Alive */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center opacity-50"
@@ -101,7 +100,11 @@ export default function AnimatedBackground() {
       {/* Inner rotating square */}
       <motion.div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl"
-        style={{ width: "18rem", height: "18rem", border: "1px solid rgba(255,255,255,0.08)" }}
+        style={{
+          width: "18rem",
+          height: "18rem",
+          border: "1px solid rgba(255,255,255,0.08)",
+        }}
         animate={{ rotate: -360 }}
         transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
       />
@@ -122,27 +125,26 @@ export default function AnimatedBackground() {
         />
       ))}
 
-        {/* Floating Tech Graphics */}
-        {techGraphics.map(({ src, top, left, d, w, h }, i) => (
+      {/* Floating Tech Graphics */}
+      {techGraphics.map(({ src, alt, top, left, d, w, h }, i) => (
         <motion.div
-            key={i}
-            className="absolute"
-            style={{ top, left, width: `${w}px`, height: `${h}px` }}
-            animate={{
+          key={i}
+          className="absolute"
+          style={{ top, left, width: `${w}px`, height: `${h}px` }}
+          animate={{
             y: [0, -20, 20, 0],
             rotate: [0, 10, -10, 0],
-            }}
-            transition={{
+          }}
+          transition={{
             duration: d,
             repeat: Infinity,
             repeatType: "mirror",
             ease: "easeInOut",
-            }}
+          }}
         >
-            <Image src={src} alt="tech" width={w} height={h} />
+          <Image src={src} alt={alt} width={w} height={h} />
         </motion.div>
-        ))}
-
+      ))}
     </div>
   );
 }
