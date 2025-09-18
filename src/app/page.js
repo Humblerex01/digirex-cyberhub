@@ -7,20 +7,22 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen text-white overflow-hidden">
-      {/* Animated tech background */}
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Animated background */}
       <AnimatedBackground />
 
-    {/* Hero Section */}
-    <section className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6">
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold mb-4"
-      >
-        Welcome to DigiRex Cyber Hub
-      </motion.h1>
+      {/* Page content always above background */}
+      <div className="relative z-10 text-white">
+        {/* Hero Section */}
+        <section className="flex flex-col items-center justify-center min-h-screen text-center px-6">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold mb-4"
+          >
+            Welcome to DigiRex Cyber Hub
+          </motion.h1>
 
       <br></br>
 
@@ -154,6 +156,7 @@ export default function Home() {
     © {new Date().getFullYear()} DigiRex Cyber Hub. All Rights Reserved.
   </div>
 </footer>
+</div>
 
     </main>
   );

@@ -24,7 +24,7 @@ export default function AnimatedBackground() {
 
 
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="absolute inset-0 -z-0 overflow-hidden">
       {/* Tech Background Image Alive */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center opacity-50"

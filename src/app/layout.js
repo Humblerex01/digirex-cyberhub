@@ -6,7 +6,7 @@ import BackToTop from "../../components/BackToTop";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-purple-600 via-pink-500 to-red-400 text-white min-h-screen">
+      <body className="text-white min-h-screen bg-transparent">
         <Navbar />
         {children}
         <BackToTop />
