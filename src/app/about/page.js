@@ -327,7 +327,7 @@ Above all, DigiRex Cyber Hub was founded on integrity, expertise, and innovation
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90">
           <FaLinkedin className="text-[#09F289]" />
-          <Link href="www.linkedin.com/in/digirex-cyber-hub-532171385" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
+          <Link href="https://www.linkedin.com/in/digirex-cyber-hub-532171385/" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
         </div>
       </div>
 
