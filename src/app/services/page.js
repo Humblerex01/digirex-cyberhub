@@ -145,19 +145,19 @@ const services = [
         </h4>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaFacebook className="text-[#09F289]" />
-          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Facebook</Link>
+          <Link href="https://www.facebook.com/share/1A2R711QaX/?mibextid=wwXIfr" className="text-white hover:underline hover:text-[#09F289]">@Facebook</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaTwitter className="text-[#09F289]" />
-          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Twitter</Link>
+          <Link href="https://x.com/DigirexCyberHub?t=zefeBSASRZVjggAqj8_6-w&s=09" className="text-white hover:underline hover:text-[#09F289]">@Twitter</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90 mb-2">
           <FaInstagram className="text-[#09F289]" />
-          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@Instagram</Link>
+          <Link href="https://www.instagram.com/digirex_cyber_hub?igsh=MXJ0M3UxYnJqOTQyYw%3D%3D&utm_source=qr" className="text-white hover:underline hover:text-[#09F289]">@Instagram</Link>
         </div>
         <div className="flex items-center gap-2 text-sm opacity-90">
           <FaLinkedin className="text-[#09F289]" />
-          <Link href="#" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
+          <Link href="www.linkedin.com/in/digirex-cyber-hub-532171385" className="text-white hover:underline hover:text-[#09F289]">@LinkedIn</Link>
         </div>
       </div>
 
