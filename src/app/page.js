@@ -107,6 +107,7 @@ export default function Home() {
                 transformation.
               </p>
             </div>
+            <br></br>
 
             {/* Row for Quick Links + Follow Us on mobile */}
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-8">
