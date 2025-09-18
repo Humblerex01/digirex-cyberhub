@@ -12,9 +12,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-[#08CF75] bg-opacity-80 backdrop-blur-md shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <motion.a
-          href="/"
-          className="flex items-center space-x-2">
+        <motion.a href="/" className="flex items-center space-x-2">
           <Image 
             src="/logo.png" 
             alt="DigiRex Logo" 
@@ -45,12 +43,21 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-[#090055] text-[#FFFFFF] px-6 py-4 space-y-4"
+          className="md:hidden bg-[#090055] text-[#FFFFFF] px-6 py-4 space-y-4 relative"
         >
-          <Link href="/" className="block hover:text-[#09F289]">Home</Link>
-          <Link href="/about" className="block hover:text-[#09F289]">About</Link>
-          <Link href="/services" className="block hover:text-[#09F289]">Services</Link>
-          <Link href="/contact" className="block hover:text-[#09F289]">Contact</Link>
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-3 right-4 text-2xl font-bold text-[#09F289] hover:text-white"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+
+          <Link href="/" onClick={() => setIsOpen(false)} className="block hover:text-[#09F289]">Home</Link>
+          <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-[#09F289]">About</Link>
+          <Link href="/services" onClick={() => setIsOpen(false)} className="block hover:text-[#09F289]">Services</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="block hover:text-[#09F289]">Contact</Link>
         </motion.div>
       )}
     </nav>
