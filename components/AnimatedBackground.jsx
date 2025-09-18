@@ -46,7 +46,7 @@ export default function AnimatedBackground() {
       <motion.div
         className="absolute inset-0 opacity-60"
         animate={{
-          background: [
+          backgroundImage: [
             "linear-gradient(135deg, #090055, #09F289)",
             "linear-gradient(135deg, #09F289, #FFFFFF)",
             "linear-gradient(135deg, #FFFFFF, #090055)",
